@@ -74,7 +74,7 @@ public class Login extends JDialog {
 
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addKeyListener(new KeyAdapter() {
-			@Override
+			
 			public void keyPressed(KeyEvent e) {
 				if (e.getKeyChar() == KeyEvent.VK_ENTER) {
 					loginKeyAction();
@@ -92,13 +92,13 @@ public class Login extends JDialog {
 
 		JButton btnSignIn = new JButton("Sign in");
 		btnSignIn.addActionListener(new ActionListener() {
-			@Override
+			
 			public void actionPerformed(ActionEvent e) {
 				singUpKeyAction();
 			}
 		});
 		btnSignIn.addKeyListener(new KeyAdapter() {
-			@Override
+			
 			public void keyPressed(KeyEvent e) {
 				if (e.getKeyChar() == KeyEvent.VK_ENTER) {
 					singUpKeyAction();
@@ -109,14 +109,14 @@ public class Login extends JDialog {
 		getContentPane().add(btnSignIn);
 		
 		addWindowListener(new WindowAdapter() {
-			@Override
+			
 			public void windowClosing(WindowEvent e) {
 				Connect.disconnect();
 			}
 		});
 	}
 
-	@SuppressWarnings("deprecation")
+	
 	private void loginKeyAction() {
 		person.setUser(textUserField.getText());
 		person.setPass(passwordField.getText());
